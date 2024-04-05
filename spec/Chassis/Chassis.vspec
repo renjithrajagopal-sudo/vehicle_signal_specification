@@ -146,6 +146,7 @@ SteeringWheel:
   description: Steering wheel signals
 
 SteeringWheel.Angle:
+  validate: read-write
   datatype: int16
   type: sensor
   unit: degrees

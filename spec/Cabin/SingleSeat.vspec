@@ -38,6 +38,7 @@ Occupant:
 #include Occupant.vspec Occupant
 
 IsBelted:
+  validate: read-write
   datatype: boolean
   type: sensor
   description: Is the belt engaged.

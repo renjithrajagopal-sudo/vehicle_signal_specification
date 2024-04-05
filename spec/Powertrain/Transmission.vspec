@@ -54,6 +54,7 @@ TravelledDistance:
 # Current gear
 #
 CurrentGear:
+  validate: read-write
   datatype: int8
   type: sensor
   description: The current gear. 0=Neutral, 1/2/..=Forward, -1/-2/..=Reverse.

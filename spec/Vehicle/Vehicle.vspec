@@ -52,6 +52,7 @@ VehicleIdentification:
   description: Attributes that identify a vehicle.
 
 VehicleIdentification.VIN:
+  validate: read-write
   datatype: string
   type: attribute
   description: 17-character Vehicle Identification Number (VIN) as defined by ISO 3779.
@@ -67,6 +68,7 @@ VehicleIdentification.Brand:
   description: Vehicle brand or manufacturer.
 
 VehicleIdentification.Model:
+  validate: read-write
   datatype: string
   type: attribute
   description: Vehicle model.
@@ -200,9 +202,11 @@ Speed:
   datatype: float
   type: sensor
   unit: km/h
+  validate: read-write
   description: Vehicle speed.
 
 TraveledDistance:
+  validate: read-write
   datatype: float
   type: sensor
   unit: km
@@ -456,6 +460,7 @@ CurrentLocation.Timestamp:
   description: Timestamp from GNSS system for current location, formatted according to ISO 8601 with UTC time zone.
 
 CurrentLocation.Latitude:
+  validate: read-write
   datatype: double
   type: sensor
   min: -90
@@ -464,6 +469,7 @@ CurrentLocation.Latitude:
   description: Current latitude of vehicle in WGS 84 geodetic coordinates, as measured at the position of GNSS receiver antenna.
 
 CurrentLocation.Longitude:
+  validate: read-write
   datatype: double
   type: sensor
   min: -180
@@ -472,6 +478,7 @@ CurrentLocation.Longitude:
   description: Current longitude of vehicle in WGS 84 geodetic coordinates, as measured at the position of GNSS receiver antenna.
 
 CurrentLocation.Heading:
+  validate: read-write
   datatype: double
   type: sensor
   min: 0

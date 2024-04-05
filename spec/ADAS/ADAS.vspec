@@ -22,6 +22,7 @@
 #
 
 ActiveAutonomyLevel:
+  validate: read-write
   datatype: string
   type: sensor
   allowed: [
@@ -70,6 +71,7 @@ CruiseControl.IsEnabled:
                True = Enabled. False = Disabled.
 
 CruiseControl.IsActive:
+  validate: read-write
   datatype: boolean
   type: actuator
   description: Indicates if cruise control system is active (i.e. actively controls speed).
@@ -99,6 +101,7 @@ LaneDepartureDetection.IsEnabled:
   description: Indicates if lane departure detection system is enabled. True = Enabled. False = Disabled.
 
 LaneDepartureDetection.IsWarning:
+  validate: read-write
   datatype: boolean
   type: sensor
   description: Indicates if lane departure detection registered a lane departure.
