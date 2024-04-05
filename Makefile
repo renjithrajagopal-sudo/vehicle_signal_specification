@@ -20,6 +20,7 @@ optional_targets: clean protobuf ttl
 
 TOOLSDIR?=./vss-tools
 COMMON_ARGS=-u ./spec/units.yaml --strict
+COMMON_ARGS_STRIP_STRICT=-u ./spec/units.yaml
 
 json:
 	${TOOLSDIR}/vspec2json.py ${COMMON_ARGS} ./spec/VehicleSignalSpecification.vspec vss_rel_$$(cat VERSION).json
@@ -53,7 +54,7 @@ tests:
 
 binary:
 	cd ${TOOLSDIR}/binary && $(MAKE)
-	${TOOLSDIR}/vspec2binary.py ${COMMON_ARGS} ./spec/VehicleSignalSpecification.vspec vss_rel_$$(cat VERSION).binary
+	${TOOLSDIR}/vspec2binary.py ${COMMON_ARGS_STRIP_STRICT} ./spec/VehicleSignalSpecification.vspec vss_rel_$$(cat VERSION).binary
 
 protobuf:
 	${TOOLSDIR}/vspec2protobuf.py ${COMMON_ARGS} ./spec/VehicleSignalSpecification.vspec vss_rel_$$(cat VERSION).proto
